@@ -8,4 +8,4 @@ COPY . /usr/src/app
 
 EXPOSE 80
 
-ENTRYPOINT ["npm", "run build"]
+ENTRYPOINT ["npm","run" ,"build"]
