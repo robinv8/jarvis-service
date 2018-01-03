@@ -11,8 +11,19 @@ const Bot = require('./lib/Bot');
 const MqttClient = require('./lib/mqttclient');
 const {url, switchControl} = require('./config/key');
 
-//require('./lib/test');
 const app = express();
+
+const {createDevice, deviceList, schemaList} = require('./lib/iotmd');
+
+/*createDevice('test', 'sasasasa', '24e145a6-a7ab-4eb7-98c8-0d94c4c8f32e').then(result => {
+  debugger
+})*/
+/*deviceList().then(result => {
+  debugger
+})*/
+schemaList().then(result => {
+  debugger
+})
 const mqtt = new MqttClient(url, switchControl.username, switchControl.password);
 
 const DeviceInfo = switchControl.deviceInfo;
