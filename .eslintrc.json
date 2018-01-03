@@ -1,3 +1,13 @@
 {
-    "extends": "airbnb-base"
+  "extends": "airbnb-base",
+  "rules": {
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "object-curly-spacing": [0, "always", {
+      "objectsInObjects": false,
+      "arraysInObjects": false
+    }]
+  }
 }

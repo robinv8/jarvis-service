@@ -9,9 +9,9 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const Bot = require('./lib/Bot');
 const MqttClient = require('./lib/mqttclient');
-const { url, switchControl } = require('./config/key');
+const {url, switchControl} = require('./config/key');
 
-
+//require('./lib/test');
 const app = express();
 const mqtt = new MqttClient(url, switchControl.username, switchControl.password);
 
