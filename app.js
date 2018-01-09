@@ -4,12 +4,12 @@ const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
+const ejs = require('ejs');
 const index = require('./routes/index');
 const users = require('./routes/users');
 const Bot = require('./lib/Bot');
 const MqttClient = require('./lib/mqttclient');
-const { url, switchControl } = require('./config/key');
+const {url, switchControl} = require('./config/key');
 
 
 const app = express();
@@ -20,7 +20,8 @@ const mqttManagement = new MqttClient(DeviceInfo.url, DeviceInfo.username, Devic
 mqtt.mqttManagement = mqttManagement;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.engine('html', ejs.__express);
+app.set('view engine', 'html');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
