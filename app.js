@@ -11,7 +11,6 @@ const Bot = require('./lib/Bot');
 const MqttClient = require('./lib/mqttclient');
 const {url, switchControl} = require('./config/key');
 
-
 const app = express();
 const mqtt = new MqttClient(url, switchControl.username, switchControl.password);
 
