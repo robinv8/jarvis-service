@@ -38,6 +38,13 @@ app.use('/users', users);
 app.get('/jarvis', (req, res) => {
   res.send('helloworld!');
 })
+
+app.get('/test1', (req, res) => {
+    res.redirect('https://baidu.com')
+})
+app.get('/test2', (req, res) => {
+    res.location('https://baidu.com')
+})
 // 监听post请求，DuerOS以http POST的方式来请求你的服务，[具体协议请参考](http://TODO)
 app.post('/jarvis', (req, res) => {
   req.rawBody = '';
