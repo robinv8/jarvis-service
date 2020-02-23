@@ -8,7 +8,7 @@
     "dev": "export NODE_ENV=development&&nodemon ./bin/www"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "babel-runtime": "^6.26.0",
     "baidubce-sdk": "^0.0.23",
     "body-parser": "~1.18.2",
